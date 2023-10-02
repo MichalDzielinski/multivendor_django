@@ -4,6 +4,7 @@ import os
 
 #region BASIC SETTINGS & DEPLOYMENT
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv()
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
