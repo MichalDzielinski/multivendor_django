@@ -89,3 +89,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 #endregion
 
+#region STRIPE
+
+STRIPE_SECRET_KEY= os.environ.get('SSK')
+STRIPE_PUBLISHABLE_KEY= os.environ.get('SPK')
+
+#endregion 

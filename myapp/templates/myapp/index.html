@@ -7,5 +7,31 @@ Index page
 
 {% block content %}
 
-<h1>This is just an index page</h1>
+<div class="product-container flex">
+{% for p in pr %}
+    <div class="p shadow-lg w-1/4 rounded-lg m-10">
+        <div class="product-image">
+            <img src="https://www.avisa.care//assets/img/No_Product_Found.png" alt="">
+        </div>
+        <div class="p-5">
+            <div class="font-bold">
+                {{p.name}}
+            </div>
+            <div>
+                {{p.description}}
+            </div>
+            <div class="text-green-700 font-bold">
+                ${{p.price}}
+            </div>
+            <div class="mt-5">
+                <a href="{% url 'detail' p.id %}" class="bg-green-500 text-white px-4 py-2">View Details</a>
+            </div>
+        </div>
+    </div>
+{% endfor  %}
+
+</div>
+
+
 {% endblock %}
+

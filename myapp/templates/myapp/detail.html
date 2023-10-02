@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Product: {{p.name}}
+{% endblock  %}
+
+{% block content %}
+
+    <div class="flex p-10">
+        <div>
+
+            <img src="https://www.avisa.care//assets/img/No_Product_Found.png" alt="">
+
+        </div>
+        <div class="pl-10">
+            <div class="text-4xl mb-4">{{p.name}}</div>
+            <div class="mb-4">{{p.description}}</div>
+            <div class="mb-4 text-green-700 font-bold">${{p.price}}</div>
+            <div>
+                <button id="checkout-button" class="bg-green-500 text-white px-4 py-2 rounded-sm">Buy</button>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}
+
